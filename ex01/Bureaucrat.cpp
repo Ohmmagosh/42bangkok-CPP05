@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:01:35 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/09 22:52:38 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/09 20:02:07 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,7 @@ Bureaucrat::~Bureaucrat( void ) {
 }
 
 std::ostream& operator<<(std::ostream& stream, const Bureaucrat &cp) {
+	// <name>, bureaucrat grade <grade>.
 	stream << cp.getName() << ", bureaucrat grade " << cp.getGrade() << std::endl;
 
 	return (stream);
