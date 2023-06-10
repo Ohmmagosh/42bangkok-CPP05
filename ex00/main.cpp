@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/13 21:01:32 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/09 20:02:26 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/10 21:23:21 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,13 +35,11 @@ int	main(void) {
 		}
 	}
 	{
-		try
-		{
+		try{
 			Bureaucrat a("Fourty", 40);
 			std::cout << a ;
 		}
-		catch(const std::exception& e)
-		{
+		catch(const std::exception& e){
 			std::cerr << e.what() << std::endl;
 		}
 	}

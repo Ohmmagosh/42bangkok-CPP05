@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:11:27 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/10 21:49:45 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/10 21:39:02 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,12 +64,13 @@ std::string	Form::getName( void ) const{
 }
 
 void	Form::beSigned( const Bureaucrat& cp) {
-	if (cp.getGrade() > 150) {
+	if (cp.getGrade() >= this->getGradere()) {
+		this->_signed = true;
+	}
+	else {
 		this->_signed = false;
 		throw GradeTooLowException();
 	}
-	else
-		this->_signed = true;
 }
 
 void	Form::signForm( const Bureaucrat& cp ) {
