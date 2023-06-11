@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:11:27 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/10 21:39:02 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/11 13:11:28 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,6 +78,10 @@ void	Form::signForm( const Bureaucrat& cp ) {
 		std::cout << cp.getName() << " signed " << this->getName() << std::endl;
 	else
 		std::cout << cp.getName() << " couldn't sign " << this->getName() << "because" << cp.getGrade() << std::endl;
+}
+
+void	Form::execute(Bureaucrat const & executor) const {
+	(void)0;
 }
 
 std::ostream& operator<<(std::ostream& stream, const Form &cp) {
