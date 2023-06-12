@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/10 20:18:31 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/12 16:52:01 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 21:56:55 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,12 +28,15 @@ int main( void )
 		pForm->beSigned(b);
 		rForm->beSigned(c);
 		sForm->beSigned(c);
+		sForm->execute(c);
 		std::cout << a << std::endl;
 		std::cout << b << std::endl;
 		std::cout << c << std::endl;
+
 		c.executeForm(*sForm);
 		c.executeForm(*rForm);
 		c.executeForm(*pForm);
+
 		delete pForm;
 		delete rForm;
 		delete sForm;

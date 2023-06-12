@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:03:52 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/11 22:24:22 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 22:02:59 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 # include <ostream>
 # include <iostream>
 # include <fstream>
+// # include <ofstream>
 # include <sstream>
 # include "Bureaucrat.hpp"
 # include <exception>

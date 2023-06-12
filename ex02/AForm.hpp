@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:15:27 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/11 23:37:15 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 21:55:47 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,14 +25,14 @@ class AForm {
 		AForm(std::string name, int gradere, int gradeexe);
 		AForm( const AForm& cp );
 		AForm& operator=( const AForm& cp );
-		~AForm( void );
+		virtual ~AForm( void );
 		void 	beSigned( const Bureaucrat& cp );
 		void 	signForm( const Bureaucrat& cp );
 		bool	getSigned( void ) const;
 		int		getGradere( void ) const;
 		int		getGradeexe( void ) const;
 		std::string	getName( void ) const;
-		void execute( Bureaucrat const & executor) const;
+		virtual void execute( Bureaucrat const & executor) const;
 	class GradeTooHighException: public std::exception {
 		public:
 			virtual const char * what () const throw () {

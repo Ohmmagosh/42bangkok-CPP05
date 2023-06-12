@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:03:49 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/12 21:41:29 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 22:02:30 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,6 @@
 
 
 ShrubberyCreationForm::ShrubberyCreationForm( void ): AForm("ShrubberyCreationForm", 145, 137) {
-	std::cout << "ShrubberyCreationForm create" << std::endl;
-}
-
-ShrubberyCreationForm::ShrubberyCreationForm( std::string name ): AForm(name, 145, 137) {
 	std::cout << "ShrubberyCreationForm create" << std::endl;
 }
 
@@ -39,10 +35,14 @@ ShrubberyCreationForm::~ShrubberyCreationForm( void ) {
 
 void	ShrubberyCreationForm::execute( const Bureaucrat& executor) const{
 	std::stringstream	name;
-	std::fstream		fd;
+	std::ofstream		fd;
+	std::string			fname;
 
-	if (executor.getGrade() >= this->getGradeexe() && this->getSigned()) {
-		fd.open(name.str());
+	if (executor.getGrade() >= this->getGradeexe()) {
+		std::cout << "hello--------" << std::endl;
+		name << executor.getName() << "_shrubbery";
+		fname = name.str();
+		fd.open(fname);
 		if (fd.is_open()) {
 			fd << "       _-_       "<< std::endl;
 			fd << "    /~~   ~~\\    "<< std::endl;
