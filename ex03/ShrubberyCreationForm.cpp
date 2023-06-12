@@ -6,12 +6,11 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:03:49 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/12 21:41:29 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 21:21:32 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ShrubberyCreationForm.hpp"
-
 
 ShrubberyCreationForm::ShrubberyCreationForm( void ): AForm("ShrubberyCreationForm", 145, 137) {
 	std::cout << "ShrubberyCreationForm create" << std::endl;
@@ -56,6 +55,7 @@ void	ShrubberyCreationForm::execute( const Bureaucrat& executor) const{
 			fd.close();
 		}
 	} else {
+		std::cout << "hello" << std::endl;
 		throw AForm::GradeTooLowException();
 	}
 }
