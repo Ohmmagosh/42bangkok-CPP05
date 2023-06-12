@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:04:13 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/11 22:37:52 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/11 23:30:11 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,13 @@ PresidentialPardonForm::PresidentialPardonForm( void ): AForm("PresidentialPardo
 }
 
 PresidentialPardonForm::PresidentialPardonForm( const PresidentialPardonForm& cp): AForm("PresidentialPardonForm", 25, 5){
-
+	*this = cp;
 }
 
 PresidentialPardonForm& PresidentialPardonForm::operator=( const PresidentialPardonForm& cp ) {
-	*this = cp;
+	if (this != &cp)
+		*this = cp;
+	return (*this);
 }
 
 PresidentialPardonForm::~PresidentialPardonForm() {

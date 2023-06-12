@@ -6,7 +6,7 @@
 #    By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2023/03/13 21:01:42 by psuanpro          #+#    #+#              #
-#    Updated: 2023/06/11 22:41:35 by psuanpro         ###   ########.fr        #
+#    Updated: 2023/06/11 23:15:05 by psuanpro         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,14 +14,14 @@ NAME = Formup,maggots!
 CC = c++
 CFLAGS = -Wall -Wextra -Werror -std=c++98
 
-SRCS =	main.cpp \
+SRCS =	AForm.cpp \
 		Bureaucrat.cpp \
-		AForm.cpp \
 		PresidentialPardonForm.cpp \
 		RobotomyRequestForm.cpp \
-		ShrubberyCreationForm.cpp
+		ShrubberyCreationForm.cpp \
+		main.cpp
 
-BJS = ${SRCS:.cpp=.o}
+OBJS = ${SRCS:.cpp=.o}
 
 BRED =\033[1;31m
 BGRN =\033[1;32m

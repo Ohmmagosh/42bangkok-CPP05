@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/09 20:15:27 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/11 13:11:07 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/10 20:55:53 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,6 @@ class Form {
 		int		getGradere( void ) const;
 		int		getGradeexe( void ) const;
 		std::string	getName( void ) const;
-		void execute(Bureaucrat const & executor) const;
 	private:
 		const std::string   _name;
 		bool                _signed;

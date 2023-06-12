@@ -6,7 +6,7 @@
 /*   By: psuanpro <psuanpro@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/06/11 13:03:49 by psuanpro          #+#    #+#             */
-/*   Updated: 2023/06/11 22:03:14 by psuanpro         ###   ########.fr       */
+/*   Updated: 2023/06/12 15:40:22 by psuanpro         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,8 @@ ShrubberyCreationForm::ShrubberyCreationForm( const ShrubberyCreationForm& cp): 
 }
 
 ShrubberyCreationForm& ShrubberyCreationForm::operator=( const ShrubberyCreationForm& cp) {
+	if (this != &cp)
+		*this = cp;
 	return (*this);
 }
 
@@ -50,6 +52,7 @@ void	ShrubberyCreationForm::execute( const Bureaucrat& executor) const{
 			fd.close();
 		}
 	} else {
+		std::cout << "hello" << std::endl;
 		throw AForm::GradeTooLowException();
 	}
 }
